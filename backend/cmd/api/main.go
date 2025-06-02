@@ -13,7 +13,7 @@ func main() {
 	})
 
 	app.Use(cors.New())
-	app.Static("/", "../frontend/dist")
+	app.Static("/", "./frontend/dist")
 	app.Get("/api/v1/mix", getMix)
 
 	log.Fatal(app.Listen(":8080"))

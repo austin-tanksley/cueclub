@@ -14,7 +14,7 @@ func main() {
 
 	app.Static("/", "./frontend/dist")
 	app.Use(cors.New(cors.Config{
-		AllowOrigins: "https://cueclub.onrender.com",
+		// AllowOrigins: "https://cueclub.onrender.com",
 		// AllowHeaders: "Origin, Content-Type, Accept",
 	}))
 	app.Get("/api/v1/mix", getMix)

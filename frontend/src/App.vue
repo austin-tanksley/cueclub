@@ -9,6 +9,6 @@ import VideoPlayer from './components/VideoPlayer.vue'
 
 <style scoped>
   *{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Outfit", sans-serif;
   }
 </style>

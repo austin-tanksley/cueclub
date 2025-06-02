@@ -4,7 +4,7 @@ import (
 	"log"
 
 	"github.com/gofiber/fiber/v2"
-	// "github.com/gofiber/fiber/v2/middleware/cors"
+	"github.com/gofiber/fiber/v2/middleware/cors"
 )
 
 func main() {
@@ -12,7 +12,11 @@ func main() {
 		AppName: "Cueclub.live",
 	})
 
-	app.Static("/", "./frontend/dist")
+	app.Static("/", "../frontend/dist")
+	app.Use(cors.New(cors.Config{
+		// AllowOrigins: "https://cueclub.onrender.com",
+		// AllowHeaders: "Origin, Content-Type, Accept",
+	}))
 	app.Get("/api/v1/mix", getMix)
 
 	log.Fatal(app.Listen(":8080"))

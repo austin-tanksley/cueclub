@@ -7,7 +7,7 @@
     title: ""
   })
 
-  const url = 'https://cueclub.onrender.com/api/v1/mix'
+  const url = 'http://localhost:8080/api/v1/mix'
   let embedURL = ref("")
   const c = ref(null)
 
@@ -22,7 +22,7 @@
       mix.title = json.title
       mix.ytid = json.ytid
       mix.id = json.id
-      embedURL.value = `https://www.youtube.com/embed/${mix.ytid}?autoplay=1`
+      embedURL.value = `https://www.youtube-nocookie.com/embed/${mix.ytid}?autoplay=1&rel=0&modestbranding=1`
 
     } catch (error) {
       console.error(error.message)
@@ -39,7 +39,6 @@
     function animate() {
       ctx.fillStyle = `hsl(${hue}, 80%, 90%)`;
       ctx.fillRect(0,0, canvas.width, canvas.height)
-      ctx.effe
       hue = (hue + 1) % 360
       requestAnimationFrame(animate)
     }

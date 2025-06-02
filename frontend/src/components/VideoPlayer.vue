@@ -7,7 +7,7 @@
     title: ""
   })
 
-  const url = 'http://cueclub.onrender.com/api/v1/mix'
+  const url = 'https://cueclub.onrender.com/api/v1/mix'
   let embedURL = ref("")
   const c = ref(null)
 

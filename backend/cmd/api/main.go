@@ -12,7 +12,7 @@ func main() {
 		AppName: "Cueclub.live",
 	})
 
-	app.Static("/", "../frontend/dist")
+	app.Static("/", "./frontend/dist")
 	app.Use(cors.New(cors.Config{
 		AllowOrigins: "https://cueclub.onrender.com",
 		// AllowHeaders: "Origin, Content-Type, Accept",

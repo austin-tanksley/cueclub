@@ -11,7 +11,7 @@ import (
 )
 
 func getMix(c *fiber.Ctx) error {
-	db, err := sql.Open("sqlite3", "./data/cueclub.db")
+	db, err := sql.Open("sqlite3", "./backend/data/cueclub.db")
 	if err != nil {
 		return fiber.DefaultErrorHandler(c, err)
 	}
